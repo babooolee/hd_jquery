@@ -2,6 +2,7 @@
 :root {
     --mc: #008850;
     --wc: #f9f9f9;
+    --dc: #444444;
 }
 
 .inner {
@@ -144,20 +145,34 @@
 }
 
 .header {
-    position: relative;
-    background: rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid #ddd
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .header .bottom {
     position: relative;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid transparent;
     line-height: 80px;
+    color: var(--wc);
+    transition: 0.5s;
+}
+
+.header .bottom.on {
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid transparent;
+    line-height: 60px;
+    color: var(--dc);
 }
 
 .header h1 {
     position: absolute;
     top: 0;
     left: 50px;
+    font-size: 0;
 }
 
 .header h1 a {
@@ -169,6 +184,10 @@
     vertical-align: middle;
 }
 
+.header .bottom.on h1 a {
+    background: url(../images/logo02.png);
+}
+
 .header nav {
     width: 1200px;
     margin: 0 auto;
@@ -178,6 +197,43 @@
     position: absolute;
     top: 0;
     right: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.header .right .xi-search {
+    font-size: 25px;
+}
+
+.header .right>li {
+    position: relative;
+}
+
+.header .right .link {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--wc);
+    line-height: 1.45;
+    padding: 10px 30px;
+    border: 2px solid var(--mc);
+    color: var(--dc);
+    text-transform: uppercase;
+}
+
+.header .right .link.on {
+    display: block;
+}
+
+.header .grobal {
+    cursor: pointer;
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 50px;
 }
 
 .main {
