@@ -5,7 +5,8 @@ $(function () {
     });
 
     $('.top_banner i').on('click', function () {
-        $('.top_banner').slideUp(200)
+        $('.top_banner').slideUp(200);
+        $('.main').addClass('on')
     });
 
     $(window).on('scroll', function () {
@@ -19,5 +20,16 @@ $(function () {
 
     $('.header .grobal').on('click', function () {
         $('.header .link').toggleClass('on')
+    });
+
+    $('.main_slide').slick({
+        arrows: false,
+    });
+
+    $('.main_visual .arrows i:first-child').on('click', function () {
+        $('.main_slide').slick('slickPrev')
+    })
+    $('.main_visual .arrows i:last-child').on('click', function () {
+        $('.main_slide').slick('slickNext')
     })
 })
