@@ -16,15 +16,21 @@
     flex-direction: row;
 }
 
+.text-center {
+    text-align: center;
+}
+
+
 .section {
     padding: 100px 0;
     letter-spacing: -0.025em;
 }
 
+
 .section h2 {
     font-size: 30px;
-    font-weight: 500;
-    margin: 0 0 30px 0;
+    font-weight: 700;
+    margin: 0 0 20px 0;
 }
 
 .section p {
@@ -398,4 +404,28 @@
     to {
         top: -55px
     }
+}
+
+.main_business {}
+
+.main_business .inner figure {
+    flex: 1;
+}
+
+.main_business .inner .box {
+    margin: 0 0 50px 0;
+}
+
+.main_business .inner strong {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.main_business .inner p {
+    margin: 0 0 30px 0;
+    padding: 0 50px;
+    font-size: 17px;
+    word-break: keep-all;
 }
