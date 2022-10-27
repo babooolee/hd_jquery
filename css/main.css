@@ -558,15 +558,40 @@
     transform: translateX(-500px);
     border: 1px solid var(--gc);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+    padding: 60px 50px;
+    text-align: left;
+}
+
+.main_solution .solution_con::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: -30px;
+    width: 60px;
+    height: 2px;
+    background: var(--mc);
+}
+
+.main_solution .solution_con h3 {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+.main_solution .solution_con p {
+    font-size: 15px;
+    min-height: 200px;
+    line-height: 1.45;
+    word-break: keep-all;
 }
 
 .main_solution .solusion_slider figure img {
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(1.5);
     margin: 0 auto;
 }
 
 .main_solution .solusion_slider figure.slick-center img {
-    filter: grayscale(0);
+    filter: grayscale(0) brightness(1);
 }
 
 .main_solution .solusion_slider .slick-dots {
@@ -592,26 +617,28 @@
     background: var(--mc);
 }
 
-.main_solution .solution_con .box {
+.main_solution .solution_con .con {
     display: none;
 }
 
-.main_solution .solution_con .box.on {
+.main_solution .solution_con .con.on {
     display: block;
 }
 
 .main_solution .arrows>div {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
+    transform: translateX(-50%);
     width: 100px;
     height: 50px;
     background: rgba(0, 0, 0, 0.3);
     font-size: 0;
+    cursor: pointer;
 }
 
 .main_solution .arrows .left {
-    margin: 0 0 0 -650px;
+    margin: 0 0 0 -600px;
 }
 
 .main_solution .arrows .left::before {
@@ -638,7 +665,8 @@
 
 
 .main_solution .arrows .right {
-    margin: 0 0 0 550px;
+    margin: 0 0 0 600px;
+
 }
 
 .main_solution .arrows .right::before {
@@ -661,4 +689,27 @@
     border-top: 1px solid var(--wc);
     transform: rotate(45deg);
     transform-origin: right bottom;
+}
+
+
+.to_top {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    font-size: 30px;
+    color: var(--wc);
+    background: var(--mc);
+    padding: 10px 6px;
+    cursor: pointer;
+}
+
+.to_top::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    background: var(--mc);
+    height: 2px;
 }
