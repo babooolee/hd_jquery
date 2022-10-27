@@ -65,5 +65,23 @@ $(function () {
         $('.left_slider').slick('slickNext')
     });
 
+    $('.solusion_slider').slick({
+        centerMode: true,
+        centerPadding: '300px',
+        arrows: false,
+        dots: true,
+    });
+
+    $('.solusion_slider').on('afterChange', function (e, s, c) {
+        $('.solution_con .box').eq(c).addClass('on').siblings().removeClass('on');
+    });
+
+    $('.main_solution .arrows div:first-child').on('click', function () {
+        $('.solusion_slider').slick('slickPrev')
+    })
+    $('.main_solution .arrows div:last-child').on('click', function () {
+        $('.solusion_slider').slick('slickNext')
+    });
+
 
 })
