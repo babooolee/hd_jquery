@@ -787,6 +787,73 @@
     font-family: xeicon !important;
 }
 
+.main_notice .inner {
+    gap: 30px;
+}
+
+.main_notice .inner figure {
+    flex: 1;
+    text-align: left;
+    cursor: pointer;
+}
+
+.main_notice .inner figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.main_notice .inner figure .box {
+    margin: 0 0 30px 0;
+}
+
+.main_notice .inner figure .cate {
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    color: var(--mc)
+}
+
+.main_notice .inner figure p {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    color: var(--dc)
+}
+
+.main_notice .inner figure:hover p {
+    text-decoration: underline;
+}
+
+.main_notice .inner figure span {
+    font-size: 14px;
+}
+
+.footer .ft_top {
+    border-top: 1px solid var(--gc);
+    border-bottom: 1px solid var(--gc);
+    line-height: 60px;
+}
+
+.footer .ft_bottom {
+    padding: 20px 0;
+}
+
+.footer .ft_bottom .flex>ul {
+    gap: 10px;
+}
+
+.footer .ft_bottom address {
+    font-style: normal;
+}
+
+.footer .flex {
+    justify-content: space-between;
+}
+
+.footer .flex>ul {
+    display: flex;
+    gap: 60px;
+}
+
 .to_top {
     display: none;
     position: fixed;
