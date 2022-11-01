@@ -93,7 +93,32 @@ $(function () {
     });
 
 
-    $('#bgndVideo').YTPlayer();
+    $('#bgndVideo').YTPlayer({
+        videoURL: 'https://youtu.be/raw3Nu0_mBQ',
+        containment: '.movie',
+        autoPlay: true,
+        mute: true,
+        startAt: 0,
+        opacity: 1,
+        playOnlyIfVisible: true,
+    });
+
+    var swh = true;
+
+    $('.main_promotion .movie_case .btn').on('click', function () {
+        $(this).toggleClass('on');
+        if (swh) {
+            $('#bgndVideo').YTPPause();
+        } else {
+            $('#bgndVideo').YTPPlay();
+        }
+        swh = !swh;
+    });
+
+    $('.main_promotion .title>div').on('click', function () {
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+
 
 
 })
