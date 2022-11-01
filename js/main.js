@@ -90,7 +90,10 @@ $(function () {
     $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
         sct > 300 ? $('.to_top').fadeIn() : $('.to_top').fadeOut()
-    })
+    });
+
+
+    $('#bgndVideo').YTPlayer();
 
 
 })
