@@ -120,5 +120,36 @@ $(function () {
     });
 
 
+    $('.footer .ft_top .right>li>a').on('click', function () {
+        $('.footer .ft_top .right>li').removeClass('on')
+        $(this).parent().toggleClass('on');
+    });
+
+    //i를 clck하면 li들 모두 다 on을 빼줘...
+    $('.footer .ft_top .right i').on('click', function () {
+        $('.footer .ft_top .right>li').removeClass('on')
+    });
+
+    $('.popup_case').on('wheel', function (event) {
+        event.preventDefault();
+    });
+
+    $('.popup i').on('click', function () {
+        $('.popup_case').hide()
+    });
+
+    $('.popup input').on('change', function () {
+        $('.popup_case').hide();
+        //쿠키를 던져주라...
+    });
+
+    $('.top_banner input').on('change', function () {
+        $('.top_banner').slideUp(200);
+        $('.main').addClass('on')
+        //쿠키를 던져주라...
+    });
+
+
+
 
 })
