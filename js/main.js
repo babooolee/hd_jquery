@@ -149,6 +149,22 @@ $(function () {
         //쿠키를 던져주라...
     });
 
+    //모바일 메뉴
+
+    $('.header nav>ul>li>a').on('click', function (event) {
+        event.preventDefault();
+        $('.submenu').stop().slideUp();
+        $(this).next().stop().slideToggle();
+    });
+
+    $(window).on('resize', function () {
+        $('.submenu').removeAttr('style')
+    });
+
+    $('.mopen').on('click', function () {
+        $('nav').toggleClass('on')
+    })
+
 
 
 
