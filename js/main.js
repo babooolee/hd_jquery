@@ -56,6 +56,14 @@ $(function () {
         arrows: false,
         slidesToShow: 5,
         asNavFor: '.left_slider',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     $('.main_build .wbox .right .arrows i:first-child').on('click', function () {
@@ -70,6 +78,15 @@ $(function () {
         centerPadding: '300px',
         arrows: false,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    centerMode: false,
+                    centerPadding: '300px',
+                }
+            }
+        ]
     });
 
     $('.solusion_slider').on('afterChange', function (e, s, c) {
