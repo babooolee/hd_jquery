@@ -151,19 +151,35 @@ $(function () {
         event.preventDefault();
     });
 
+
+    var cookie = $.cookie('popup');
+    var b_cookie = $.cookie('top_banner');
+
+    if (!cookie) {
+        $('.popup_case').show()
+    }
+    if (!b_cookie) {
+        $('.top_banner').show()
+    } else {
+        $('.main').addClass('on')
+    }
+
+
     $('.popup i').on('click', function () {
         $('.popup_case').hide()
     });
 
     $('.popup input').on('change', function () {
         $('.popup_case').hide();
-        //쿠키를 던져주라...
+        $.cookie('popup', 'value', { expires: 1 });
     });
+
+
 
     $('.top_banner input').on('change', function () {
         $('.top_banner').slideUp(200);
         $('.main').addClass('on')
-        //쿠키를 던져주라...
+        $.cookie('top_banner', 'value', { expires: 1 });
     });
 
     //모바일 메뉴
